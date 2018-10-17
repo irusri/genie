@@ -6,4 +6,4 @@ As we mentioned in [this](https://plantgenie.gitbook.io/meeting/diary/october-20
 1.) [Using the Docker image](https://github.com/irusri/Docker4GenIECMS)   
 2.) [Using standalone webserver](https://geniecms.readthedocs.io/en/latest/installation_updates.html)
 
-However, We need to have an error free CMS to running in the backend to compatible with both above situations.
+However, we need to have an error free CMS to running in the backend to compatible with both above situations.
