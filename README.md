@@ -34,3 +34,5 @@ docker exec -it 890fa15eeef6126b668f4b0fcb7a38b33eaff0 /bin/bash
 or
 docker attach 890fa15eeef6126b668f4b0fcb7a38b33eaff0
 </pre>
+
+Now we can start the real development and push changes.
