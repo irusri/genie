@@ -8,7 +8,7 @@ As we mentioned in [this](https://plantgenie.gitbook.io/meeting/diary/october-20
 
 However, we need to have an error free CMS to running in the backend to compatible with both above situations. For the development purpose I would like to use the docker container, commit and push changes to genie.git and simply remove the container.  
 
-**How can we make a development environment?**
+**How can we make GenIE-CMS development environment with Docker?**
 <pre>
 # Please comment the supporting_files/run.sh line to avoid download the geniecms.git  
 git clone https://github.com/irusri/docker4geniecms.git  
