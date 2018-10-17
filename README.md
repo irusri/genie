@@ -10,7 +10,7 @@ However, we need to have an error free CMS to running in the backend to compatib
 
 **How can we make a development environment?**
 <pre>
-#Please comment the supporting_files/run.sh line to avoid download the geniecms.git  
+# Please comment the supporting_files/run.sh line to avoid download the geniecms.git  
 git clone https://github.com/irusri/docker4geniecms.git  
 cd docker4geniecms  
 git submodule add -f https://github.com/irusri/genie.git  
@@ -21,15 +21,15 @@ cd genie
 
 When we need to commit the changes please go to cd docker4geniecms/genie folder. Never commit from `docker4geniecms` folder. Then it will add genie as a submodule. Incase this happens please use `docker4geniecms $ git rm geniecms`. You can access MySQL using `mysql -u admin -pmypass -h localhost -P 3308` or using [phpMyAdmin](http://localhost/phpmyadmin). Some useful docker commands are as follows.
 <pre>
-#Must be run first because images are attached to containers
+# Must be run first because images are attached to containers
 docker rm -f $(docker ps -a -q)
-#Delete every Docker images
+# Delete every Docker images
 docker rmi -f $(docker images -q)
-#To see docker process
+# To see docker process
 docker ps -l 
-#To see or remove all volumes
+# To see or remove all volumes
 docker volume ls/prune
-#To run bash inside the running docker container
+# To run bash inside the running docker container
 docker exec -it 890fa15eeef6126b668f4b0fcb7a38b33eaff0 /bin/bash
 or
 docker attach 890fa15eeef6126b668f4b0fcb7a38b33eaff0
