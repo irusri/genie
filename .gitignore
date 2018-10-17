@@ -1,0 +1,17 @@
+update_git.sh
+update_submodule.sh
+.vscode
+password
+genie_files
+genie_files/
+data
+plugins/settings.php
+plugins/eximage
+plugins/chrdiagram
+plugins/sequence_search
+plugins/jbrowse
+plugins/exmatch
+plugins/exdraw
+themes/genie/theme.php
+themes/genie
+scripts/settings.ini
