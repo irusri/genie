@@ -19,4 +19,4 @@ docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/genie:/app -v ${PWD}/m
 cd genie 
 </pre>
 
-When we need to commit the changes please go to cd docker4geniecms/genie folder. Never commit from `docker4geniecms` folder. Then it will add genie as a submodule. Incase this happens please use `docker4geniecms $ git rm geniecms`. You can access phpmyadmin using `mysql -u admin -pmypass -h localhost -P 3308`.
+When we need to commit the changes please go to cd docker4geniecms/genie folder. Never commit from `docker4geniecms` folder. Then it will add genie as a submodule. Incase this happens please use `docker4geniecms $ git rm geniecms`. You can access MySQL using `mysql -u admin -pmypass -h localhost -P 3308` or using [phpmyadmin](http://localhost/phpmyadmin).
