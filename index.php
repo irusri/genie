@@ -12,8 +12,9 @@ $rp = (isset($_SERVER['PHP_SELF']) && basename($_SERVER['PHP_SELF'])!="index.php
 $c['hostname'] = $GLOBALS["base_url"];//$hostname;
 $c['password'] = 'admin';
 $c['loggedin'] = false;
-$c['page'] = 'home';
-$d['page']['home'] = "<h3>Congratulations! You have successfully installed the GenIECMS.</h3><br />\nLogin to the admin panel using the 'Login' link in the footer. The password is admin.<br />\nChange the password as soon as possible.<br /><br />\n\nClick on the content to edit and click outside to save it.<br /><br />\n";
+$c['page'] = $rp;
+$d['page']['home'] = "TEST";//include_once("genie.php");
+//"<h3>Congratulations! You have successfully installed the GenIECMS.</h3><br />\nLogin to the admin panel using the 'Login' link in the footer. The password is admin.<br />\nChange the password as soon as possible.<br /><br />\n\nClick on the content to edit and click outside to save it.<br /><br />\n";
 $d['page']['example'] = "This is an example page.<br /><br />\n\nTo add a new one, click on the existing pages (in the admin panel) and enter a new one below the others.";
 $d['new_page']['admin'] = "Page <b>".str_replace('-',' ',$rp)."</b> created.<br /><br />\n\nClick here to start editing!";
 $d['new_page']['visitor'] = "Sorry, but <b>".str_replace('-',' ',$rp)."</b> doesn't exist. :(";

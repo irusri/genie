@@ -13,6 +13,7 @@ foreach($c as $key => $val) {
 	$fval = @file_get_contents('genie_files/'.$key);
 	$d['default'][$key] = $c[$key];
 	if ($fval) $c[$key] = $fval;
+	//echo $key."<br>";
 	switch ($key) {
 		case 'password':
 			if (!$fval) $c[$key] = savePassword($val);
@@ -31,19 +32,28 @@ foreach($c as $key => $val) {
 			$lstatus = (is_loggedin()) ? "<a href='$hostname?logout'>Logout</a>" : "<a href='$hostname?login'>Login</a>";
 			break;
 		case 'page':
+			//if ($c[$key]==""){ $c[$key]="home";}
 			if ($rp) $c[$key] = $rp;
 			$c[$key] = getthetitle($c[$key]);
+			
 			if (isset($_REQUEST['login'])) continue;
 			$c['content'] = @file_get_contents("genie_files/".$c[$key]);
 			if (!$c['content']) {
-				//echo $c[$key];
-				//print_r($d['page'][$c[$key]]);
 				if (!isset($d['page'][$c[$key]])) {
+					//echo "secondary pages"."</br>";
+					//echo "key=".$c[$key]."</br>";
+					//echo "page=".print_r($d['page']);
 					header('HTTP/1.1 404 Not Found');
 					$c['content'] = (is_loggedin()) ? $d['new_page']['admin'] : $c['content'] = $d['new_page']['visitor'];
+					
 				} else {
+					//echo "Homepage"."</br>";
+					//echo "key=".$c[$key]."</br>";
+					//echo "page=".print_r($d['page']);	
 					$c['content'] = $d['page'][$c[$key]];
+					
 				}
+				
 			}
 			break;
 		default:
