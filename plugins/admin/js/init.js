@@ -1,6 +1,6 @@
 find_dump_file();
 
-var myVar = setInterval(find_dump_file, 5000);
+var myVar = setInterval(find_dump_file, 3000);
 
 function myStopFunction() {
     clearInterval(myVar);
@@ -37,6 +37,13 @@ function download_file(key,file_name){
         data: (finalvarx),
         dataType: 'json',   
 		complete: function (data) {
+            
+            $("#db_name_1").html(file_name.split(".")[0].trim());
+            $("#db_name_2").html(file_name.split(".")[0].trim());
+            $("#species_name").html(file_name.split(".")[0].trim());
+            
+           $("#post_information").show();
+           $("#build_frame").hide();
            
 		}
 	});

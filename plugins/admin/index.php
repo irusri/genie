@@ -9,8 +9,8 @@ for($search_num=0;$search_num<count($mennu_arr);$search_num++){
 	}
 }
 
-if(strtolower(basename(dirname(__FILE__)))== basename($_SERVER['REDIRECT_URL']) || basename($_SERVER['REDIRECT_URL'])=="/" || basename($_SERVER['REDIRECT_URL'])=="Home" ){//&& $menu_exist==true
+if(strtolower(basename(dirname(__FILE__)))== basename($_SERVER['REDIRECT_URL'])  || basename($_SERVER['REDIRECT_URL'])=="Home" ){//&& $menu_exist==true
 	$c['initialize_tool_plugin']=true;
-	$c['tool_plugin']="admin";//strtolower($subdir_arr[count($subdir_arr)-1]);
+	$c['tool_plugin']="admin";
 } 
 ?>
