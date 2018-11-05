@@ -7,11 +7,11 @@
 header {
     text-align: left; 
     width: 100%;
-    background: #FFF;
+    background: #7ab6ab;
     z-index: 999;
     /*background: #FAFEFF;*/
     height:179px;
-    background: #ffffff url(../../../themes/genie/images/eucgenie_back1-01.png) repeat-x;
+    /*background: #7ab6ab url(../../../themes/genie/images/eucgenie_back1-01.png) repeat-x;*/
 }
 .my-container img {
     position: absolute;

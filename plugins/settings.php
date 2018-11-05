@@ -1,11 +1,11 @@
 <?php
 /*Here you can listed genie databases that you are going to use for different genomes and their corresponding species names. eg: "database_1" => "species 1",*/
 global $db_species_array;
-$db_species_array=array("egrandis_demo"=>"species 1","egrandis_demo"=>"species 2");
+$db_species_array=array("Zmays_181"=>"species 1","maize"=>"species 2");
 
 /*Here you can listed background colors correspond to each species. eg: "database_1" => "#FF0000",*/
 global $db_species_color_array;
-$db_species_color_array=array("egrandis_demo"=>"#86c0a6","egrandis_demo"=>"#83afae");
+$db_species_color_array=array("Zmays_181"=>"#86c0a6","maize"=>"#83afae");
 
 
 /*You dont need to change anything here*/
@@ -21,7 +21,7 @@ if(isset($_COOKIE['genie_select_species'])) {
 
 /*Please state the mysql username and password for above databases. It's important to grant only SELECT permissio to all the tables except defaultgenebaskets and genebasket tables*/
 global $db_url;
-$db_url=  array ('genelist'=>'mysqli://geniecms:geniepass@spruce.plantphys.umu.se/'.$selected_database);
+$db_url=  array ('genelist'=>'mysqli://admin:mypass@localhost/'.$selected_database);
 
 /*Define your base url with trailing slash*/
 $GLOBALS["base_url"]='http://localhost';
