@@ -6,14 +6,17 @@
          <title>".$c['title']." : ".($c['page'])."</title>
          <base href='$hostname'>
          <link rel='stylesheet' href='themes/".$c['themeSelect']."/css/style.css'>
-		  <link rel='stylesheet' href='themes/".$c['themeSelect']."/css/hint.min.css'>
+          <link rel='stylesheet' href='themes/".$c['themeSelect']."/css/hint.min.css'>
+          <link rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'>
          <script src='js/jquery.min.js'></script>
          <script type='text/javascript' src='js/jquery-ui.js'></script>
          <script src='js/print.js'></script>
+         <script src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js'></script>
 		 <link rel='shortcut icon' type='image/x-icon' href='/fav.ico'/>
 		 <meta name='author' content='Chanaka Mannapperuma'>
          <meta name='description' content='".$c['description']."'>
          <meta name='keywords' content='".$c['keywords']."'>";
+         
          editTags();
          ?>
       <script type="application/javascript">
@@ -23,7 +26,6 @@
       <script src="js/bootstrap.min.js"></script>
    </head>
    <body>
-
       <div id="body_main_div" style="width:100%;">
          <div class="loader-wrap">
             <div class="spinner">
@@ -34,7 +36,7 @@
          </div>
          <header>
             <img id="logo_img" style="margin-left:8%;padding-top:4px;cursor:pointer;background-color:#FFF;padding-left:4px;;padding-right:4px;opacity:0.9"
-            onClick="location.href='<?php echo $c['hostname']?>';" src="themes/<?php echo $c['themeSelect']?>/images/logo2.png"/>
+            onClick="location.href='<?php echo $c['hostname']?>';" src="themes/<?php echo $c['themeSelect']?>/images/logo.png"/>
 <?php  if(is_dir('plugins/autocomplete')==true){  include_once("plugins/autocomplete/autocompletesearch2.php");}?> 
          </header>
 
