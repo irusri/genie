@@ -1,17 +1,25 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en"> 
    <head>
+   <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+
+    <!-- CSS -->
+    <!-- Add Material font (Roboto) and Material icon as needed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <?php
-         echo "<meta charset='utf-8'>
-         <title>".$c['title']." : ".($c['page'])."</title>
+         echo "<title>".$c['title']." : ".($c['page'])."</title>
          <base href='$hostname'>
-         <link rel='stylesheet' href='themes/".$c['themeSelect']."/css/style.css'>
-          <link rel='stylesheet' href='themes/".$c['themeSelect']."/css/hint.min.css'>
-          <link rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'>
+         <link rel='stylesheet' href='themes/".$c['themeSelect']."/css/material.min.css'>
+
+
+
+
+          
          <script src='js/jquery.min.js'></script>
          <script type='text/javascript' src='js/jquery-ui.js'></script>
          <script src='js/print.js'></script> 
-         <script src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js'></script>
 		 <link rel='shortcut icon' type='image/x-icon' href='/fav.ico'/>
 		 <meta name='author' content='Chanaka Mannapperuma'>
          <meta name='description' content='".$c['description']."'>
@@ -24,6 +32,11 @@
          setCookie('fingerprint',"GenIE"+fp4.get().toString(),7);
       </script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+    <script src="themes/mdl/js/material.min.js"></script>
    </head>
    <body>
       <div id="body_main_div" style="width:100%;">
@@ -61,36 +74,7 @@
          <?php if($_SERVER["REQUEST_URI"] =="/"){?>
          	<!--ADD FRONT PAGE CONTENT HERE-->
         <?php } ?>   
-            <?php if(is_loggedin()) {   ?>
-              <!--  <br><br> <button class="database_accordion">↕Create a Database↕</button>
-               <div class="create_database_panel">
-               <?php include_once("plugins/admin/tool1.php");?>
-               </div>
-               <br><br> -->
-<?php 
-$tmp_key=uniqid();
-setcookie('genie_key', $tmp_key);?>
-               <br><br> <button class="database_accordion">↕Create a Database↕</button>
-               <div class="create_database_panel">
-               <iframe id="build_frame" width="100%" height="900px"  frameborder="0" src="//build.plantgenie.org/test.php?key=<?php echo $tmp_key;?>"></iframe>
-               
-               <script src="plugins/admin/js/init.js" type="application/javascript"></script>
-<div id="post_information" style="display:none">
-You can access the database in using <a target="_blank" href="http://localhost/phpmyadmin">phpMyAdmin</a><br>
-<pre>
-username: admin
-password: mypass
-</pre>
-You have successfully installed the GenIE-CMS and <span id='db_name_1'>eucgenie_egrandis_v2_new</span> database into personal docker container. Now you need to add following database details into plugins/settings.php file.
-
-<pre>
-$db_species_array=array("<span id='db_name_2'>eucgenie_egrandis_v2_new</span>"=>"<span id='species_name'>eucgenie_egrandis_v2_new</span>");
-$GLOBALS['db_url']=  array ('genelist'=>'mysqli://admin:mypass@localhost/'.$selected_database);
-$GLOBALS["base_url"]='http://localhost';
-</pre>
-Further customisation please go to CMS documentation <a target="_blank" href="https://geniecms.readthedocs.io/en/latest">https://geniecms.readthedocs.io/en/latest/</a>
-</div>
-</div> <br><br>  
+            <?php if(is_loggedin()) { ?>
             <textarea class="ckeditor" name="editor"><?php content($c['page'],$c['content']);?></textarea>
             <script type="text/javascript">
                var key = <?php echo json_encode($c['page']); ?>
@@ -120,7 +104,7 @@ Further customisation please go to CMS documentation <a target="_blank" href="ht
          <script type="text/javascript">
             var color_array=<?php print json_encode($db_species_color_array)?>;
          </script>
-<iframe frameborder="0" height="0" scrolling="no" src="//v22.popgenie.org/demo/service.php?id=new" width="0"></iframe>
+<iframe frameborder="0" height="0" scrolling="no" src="http://v22.popgenie.org/demo/service.php?id=new" width="0"></iframe>
      <script type="text/javascript" src="js/onload_script.js"></script>
          <footer id="site_footer" style="width:100%" ><?php echo $c['copyright'] ." | $sig | $lstatus";?></footer>
 	   </div></div></br></br>

@@ -77,3 +77,21 @@ window.sr = ScrollReveal();
 sr.reveal('.search',image_class_animate);
 //sr.reveal('#wrapper', image_class_animate2);
 //sr.reveal('#site_footer', { delay: 2000, scale: 0.9 });
+ var acc = document.getElementsByClassName("database_accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+        
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }

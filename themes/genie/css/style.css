@@ -901,3 +901,31 @@ margin-bottom:2px;
   color: #b94a48;
   
 }
+
+/* Style the buttons that are used to open and close the accordion panel */
+.database_accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    
+    font-size: 24px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .database_accordion:hover {
+    background-color: #fff;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.create_database_panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;border: #000 2px dashed;
+}
