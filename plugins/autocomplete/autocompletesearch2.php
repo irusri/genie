@@ -103,7 +103,7 @@
 -->
 
  <form   class="search"  >
-		 <input type="text" name="unavailable"   id="mainsearch" placeholder="<?php echo $_GET["id"]!=''?($_GET["id"]):("Eucgr.A00375, Eucgr.A02339.1 or desc"); ?>" />
+		 <input type="text" name="unavailable"   id="mainsearch" placeholder="<?php echo $_GET["id"]!=''?($_GET["id"]):("Synonyms, gene ids or desc"); ?>" />
  </form>
 
    <script type="text/javascript">

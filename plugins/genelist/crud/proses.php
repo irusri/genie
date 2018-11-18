@@ -1,5 +1,5 @@
 <?php
-	error_reporting(0);
+	//error_reporting(0);
 	include("koneksi.php");
 	if(isset($_POST))
 	{
@@ -20,7 +20,9 @@ $ip=$uuid;
 		$check=mysqli_query($genelist_connection,"select * from genebaskets where gene_basket_id='$kode' and ip='$ip'");
 		if(mysqli_num_rows($check)==0)
 		{
-		mysqli_query($genelist_connection,"insert into genebaskets(gene_basket_id,gene_basket_name,harga,genelist,ip) values('$kode','$nama','$harga','$name','$ip')") or die("data gagal di insert");
+		//	echo "insert into genebaskets(gene_basket_id,gene_basket_name,harga,genelist,ip) values('$kode','$nama','$harga','$name','$ip')";
+		mysqli_query($genelist_connection,
+		"insert into genebaskets(gene_basket_id,gene_basket_name,harga,genelist,ip) values('$kode','$nama','$harga','$name','$ip')") or die("data gagal di insert");
 		echo 1;
 		}
 		else

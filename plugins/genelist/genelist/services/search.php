@@ -16,7 +16,7 @@ $keywords =  preg_split("/[\:]+/",trim(htmlentities($_POST['id'])));
 		$sharred_list=implode('","',$geneids_array);
 }
 
-$tintinvariable="eucgr";
+$tintinvariable="at";
 $table_name="transcript_info";
 
 $datatables = new Datatables();
@@ -51,7 +51,6 @@ $datatables
 //->unset_column(''.$table_name.'.gene_end') ; 
 
 
-  
 if(isset($sharred_list)){
 $datatables->where($table_name.'.gene_id in ',$sharred_list);	
 }
@@ -60,10 +59,10 @@ if(isset($_POST['id']) && $_POST['id'] != ''){
 	$vowels = array(",", ";", "\t", "\n", "\r", "s+", " ",",,");
 	$post_input=preg_replace("/\s+/", ",", trim(htmlentities($_POST['id']))); 
 	$onlyconsonants = strtolower(str_replace($vowels, ",", $post_input));
-	$pattern = '/^[a-zA-Z]+[.]+[a-zA-Z0-9]+[.]+[0-9]?[0-9]$/';
+	$pattern = '/^[a-zA-Z]+[.]+[0-9]?[0-9]$/';
 	$flag=true;
 
-	if(checkprefix($onlyconsonants,$tintinvariable)==true && checkprefix($onlyconsonants,"eucg")==true){
+	if(checkprefix($onlyconsonants,$tintinvariable)==true && checkprefix($onlyconsonants,"at")==true){
 		$flag=false;
 	$geneids_array = explode(",", $onlyconsonants);
 	$geneids_array_str=implode('","',$geneids_array);
@@ -91,7 +90,7 @@ if(isset($_POST['id']) && $_POST['id'] != ''){
 	$datatables->where('transcript_potri.potri_id in ',$geneids_array_str);
 	}
 	
-	if(checkprefix($onlyconsonants,"atg")==true   ){
+	if(checkprefix($onlyconsonants,"astg")==true   ){
 	$flag=false;
 	$geneids_array = explode(",", $onlyconsonants);
 	$geneids_array_str=implode('","',$geneids_array);

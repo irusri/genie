@@ -26,6 +26,8 @@ $db_url=  array ('genelist'=>'mysqli://admin:mypass@localhost/'.$selected_databa
 /*Define your base url with trailing slash*/
 $GLOBALS["base_url"]='http://localhost';
 
+$db_settings['modes'] = "ONLY_FULL_GROUP_BY,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION";
+
 
 /*You dont need to change anything here*/
 global $uuid;

@@ -7,14 +7,16 @@ if (isset($_POST['genes_send']) || isset($_POST['genes_send_add'])) {
     $genessendaddStringArray = array_unique($genessendaddStringArray);
     $genessendaddString      = implode(",", $genessendaddStringArray);
     $check                   = mysqli_query($genelist_connection,"select * from defaultgenebaskets where ip='$ip'");
-	
 	if(isset($_POST['bname'])){
 	$bname=trim($_POST['bname']);
-	$initcounts22 = count($genessendaddStringArray);
-	$check_name = mysqli_query($genelist_connection,"select * from genebaskets where ip='$ip' AND gene_basket_name='$bname'");
+    $initcounts22 = count($genessendaddStringArray);
+    
+    $check_name = mysqli_query($genelist_connection,"select * from genebaskets where ip='$ip' AND gene_basket_name='$bname'");
+
 	if (mysqli_num_rows($check_name) == 0) {
 	mysqli_query($genelist_connection,"insert into genebaskets(gene_basket_id,gene_basket_name,harga,genelist,ip) values('$kode','$bname','$initcounts22','$genessendaddString','$ip')") or die("data gagal di insert");
-	if(mysqli_num_rows($check)==0) 
+    
+    if(mysqli_num_rows($check)==0) 
 		{
 		mysqli_query($genelist_connection,"insert into defaultgenebaskets(defaultgenebaskets.gene_basket_id,defaultgenebaskets.ip) SELECT LAST_INSERT_ID(gene_basket_id),'$ip' from genebaskets WHERE ip='$ip' ORDER BY gene_basket_id DESC Limit 1;");
 		}else {

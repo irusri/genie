@@ -34,6 +34,7 @@ function getdefaultgenelist()
     include("koneksi.php");
     $ip         = $uuid;
     $defaultstr = "SELECT genebaskets.genelist FROM defaultgenebaskets LEFT JOIN genebaskets ON defaultgenebaskets.gene_basket_id=genebaskets.gene_basket_id where defaultgenebaskets.ip='$ip'";
+   //return $defaultstr;
     $defaultresults = mysqli_query($genelist_connection,$defaultstr) or die("query gagal dijalankan");
     if (mysqli_num_rows($defaultresults) != 0) {
         $defaultgeenedata = mysqli_fetch_assoc($defaultresults);
