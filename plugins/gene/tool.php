@@ -1,6 +1,7 @@
 <div style="margin-top:-60px;"><link rel="stylesheet" type="text/css" href="plugins/gene/css/style2.css" />
 <script type="text/javascript" src="plugins/gene/js/jquery.hashchange.min.js"></script>
 <script type="text/javascript" src="plugins/gene/js/jquery.easytabs.min.js"></script>
+<br><br>
 <h3><span id="title"></span></h3>
 <div id="tab-container" class='tab-container'>
      <ul class='etabs'>
