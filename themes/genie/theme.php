@@ -33,7 +33,7 @@
             </div>
          </div>
          <header>
-            <img id="logo_img" style="margin-left:8%;padding-top:14px;cursor:pointer;background-color:#FFF;padding-left:4px;;padding-right:4px;opacity:0.9"
+            <img id="logo_img" style="margin-left:8%;margin-top:14px;cursor:pointer;background-color:#FFF;padding-left:4px;;padding-right:4px;opacity:0.9;padding:2px;border-radius:4px;"
             onClick="location.href='<?php echo $c['hostname']?>';" src="themes/<?php echo $c['themeSelect']?>/images/logo.png"/>
 <?php  if(is_dir('plugins/autocomplete')==true){include_once("plugins/autocomplete/autocompletesearch.php");}?> 
          </header>
