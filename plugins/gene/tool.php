@@ -1,3 +1,6 @@
+<script type="text/javascript" >
+var header_genie_select_species_name="<?php echo $_COOKIE['genie_select_species_name'];?>";
+</script>
 <div style="margin-top:-60px;"><link rel="stylesheet" type="text/css" href="plugins/gene/css/style2.css" />
 <script type="text/javascript" src="plugins/gene/js/jquery.hashchange.min.js"></script>
 <script type="text/javascript" src="plugins/gene/js/jquery.easytabs.min.js"></script>
@@ -142,4 +145,6 @@
 	</div>
 </div>
   <script src="plugins/gene/js/init.js" type="text/javascript"></script></div>
+
+
 

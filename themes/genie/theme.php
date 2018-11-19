@@ -13,7 +13,6 @@
          <script src='js/print.js'></script> 
          <script src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js'></script>
 		 <link rel='shortcut icon' type='image/x-icon' href='/fav.ico'/>
-		 <meta name='author' content='Chanaka Mannapperuma'>
          <meta name='description' content='".$c['description']."'>
          <meta name='keywords' content='".$c['keywords']."'>";
          editTags();
