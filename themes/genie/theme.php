@@ -59,15 +59,10 @@
             }else{?>
          <div id="wrapper" class="border">
          <?php if($_SERVER["REQUEST_URI"] =="/"){?>
+         
          	<!--ADD FRONT PAGE CONTENT HERE-->
         <?php } ?>   
-            <?php if(is_loggedin()) {   ?>
-              <!--  <br><br> <button class="database_accordion">↕Create a Database↕</button>
-               <div class="create_database_panel">
-               <?php include_once("plugins/admin/tool1.php");?>
-               </div>
-               <br><br> -->
-<?php 
+            <?php if(is_loggedin()) {  
 $tmp_key=uniqid();
 setcookie('genie_key', $tmp_key);?>
                <br><br> <button class="database_accordion">↕Create a Database↕</button>
