@@ -6,14 +6,14 @@ define('SITE_ROOT', dirname(__FILE__));
 define('SETTINGS', dirname(__FILE__). DS . 'plugins' . DS . 'settings.php');
 include_once(SETTINGS);
 $subdirectory=str_replace($_SERVER['DOCUMENT_ROOT'],"",getcwd());
-$rp = (isset($_SERVER['PHP_SELF']) && basename($_SERVER['PHP_SELF'])!="index.php")? basename($_SERVER['PHP_SELF']) : basename($_SERVER["REQUEST_URI"]);
-
+$rp = (isset($_SERVER['PHP_SELF']) && basename($_SERVER['PHP_SELF'])!="index.php")? basename($_SERVER['PHP_SELF']) : basename($_SERVER["REQUEST_URI"]); 
+if($rp==""){$rp="home";}
 //$hostname='http://'.$_SERVER['HTTP_HOST']."/".$subdirectory;
 $c['hostname'] = $GLOBALS["base_url"];//$hostname;
 $c['password'] = 'admin';
 $c['loggedin'] = false;
 $c['page'] = $rp;
-$d['page']['home'] = "TEST";//include_once("genie.php");
+$d['page']['home'] = "Home";//include_once("genie.php");
 //"<h3>Congratulations! You have successfully installed the GenIECMS.</h3><br />\nLogin to the admin panel using the 'Login' link in the footer. The password is admin.<br />\nChange the password as soon as possible.<br /><br />\n\nClick on the content to edit and click outside to save it.<br /><br />\n";
 $d['page']['example'] = "This is an example page.<br /><br />\n\nTo add a new one, click on the existing pages (in the admin panel) and enter a new one below the others.";
 $d['new_page']['admin'] = "Page <b>".str_replace('-',' ',$rp)."</b> created.<br /><br />\n\nClick here to start editing!";

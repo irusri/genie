@@ -15,7 +15,7 @@
       </ul>
    </li>
    <div id="editpanel2" style="background:#fff ;font-size:14px;;z-index:9;position:relative;display:none;width:100%;min-height:120px;overflow:hidden;min-height:200px;margin-left:-40px;">
-      <ul style=" display: block;list-style-type: none;">
+<!--       <ul style=" display: block;list-style-type: none;">
          <li style=" width:100%">
             <a class="toollinks" href="/blast">&nbsp;BLAST</a>
          </li>
@@ -25,10 +25,10 @@
          <li style=" width:100%">
             <a class="toollinks" href="/chrdiagram">&nbsp;ChrDiagram</a>
          </li>
-      </ul>
+      </ul> -->
    </div>
    <div id="editpanel3" style="background:#fff ;font-size:12px;n;z-index:9;position:relative;display:none;width:100%;min-height:120px;overflow:hidden;min-height:200px;margin-left:-40px;">
-      <ul style=" display: block;list-style-type: none;">
+      <!-- <ul style=" display: block;list-style-type: none;">
          <li>
             <a class="toollinks" href="/explot">&nbsp;exPlot</a>
          </li>
@@ -38,7 +38,7 @@
          <li>
             <a class="toollinks" href="/exheatmap">&nbsp;exHeatmap</a>
          </li>
-      </ul>
+      </ul> -->
    </div>
 </div>
 <link href="plugins/sidebar/drag/geniemenu.css" rel="stylesheet" />
